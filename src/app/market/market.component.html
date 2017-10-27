@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12">
+    
+    <ul class="list-group" *ngFor='let item of items'>
+      <li class="list-group-item">
+        <button class="btn btn-success" (click)='onBuyClicked(item);'>BUY</button>
+        {{item.description}}
+        <span class="badge">{{item.flag}}</span>
+      </li>
+    </ul>
+    
+    <h5 *ngIf='items.length === 0'>No items in MARKET yet.</h5>
+    
+  </div>
+</div>
